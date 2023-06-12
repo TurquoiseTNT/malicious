@@ -3,6 +3,7 @@
 <h2>The site you have tried to visit has been blocked by MALICIOUS</h2>
 <h4 id="domain">DOMAIN: UNKNOWN</h4>
 <p id="description">The domain you have tried to access has been blocked by MALICIOUS</p>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
 <script>
   if(location.href.includes("#")){
     console.log("[x] CONTAINS DOMAIN");
@@ -12,7 +13,7 @@
     console.log(xmlHttp.responseText);
     console.log(JSON.parse(xmlHttp.responseText));
     JSON.parse(xmlHttp.responseText);
-    bl = JSON.parse(xmlHttp.responseText);
+    bl = JSON.parse(in);
     console.log(bl)
     if(bl.hasOwnProperty(location.href.split("#")[1])){
       console.log("[x] CONTAINS BLACKLISTED DOMAIN");
