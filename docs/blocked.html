@@ -5,13 +5,16 @@
 <p id="description">The domain you have tried to access has been blocked by MALICIOUS</p>
 <script>
   if(location.pathname.includes("#")){
+    console.log("[x] CONTAINS DOMAIN");
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", "https://raw.githubusercontent.com/TurquoiseTNT/malicious/main/blacklist.json");
     xmlHttp.send( null );
     bl = JSON.parse(xmlHttp.responseText);
     if(bl.hasOwnProperty(location.pathname.split("#")[1])){
+      console.log("[x] CONTAINS BLACKLISTED DOMAIN");
       document.getElementById("domain").innerHTML = "DOMAIN: " + location.pathname.split("#")[1];
       document.getElementById("description").innerHTML = bl[location.pathname.split("#")[1]];
+      console.log("[x] ELEMENTS CHANGED");
     }
   }
 </script>
