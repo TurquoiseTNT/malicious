@@ -10,7 +10,8 @@
     xmlHttp.open("GET", "https://raw.githubusercontent.com/TurquoiseTNT/malicious/main/blacklist.json");
     xmlHttp.send( null );
     console.log(xmlHttp.responseText);
-    console.log(JSON.parse(xmlHttp.responseText))
+    console.log(JSON.parse(xmlHttp.responseText));
+    JSON.parse(xmlHttp.responseText);
     bl = JSON.parse(xmlHttp.responseText);
     console.log(bl)
     if(bl.hasOwnProperty(location.href.split("#")[1])){
