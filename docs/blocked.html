@@ -9,7 +9,10 @@
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", "https://raw.githubusercontent.com/TurquoiseTNT/malicious/main/blacklist.json");
     xmlHttp.send( null );
+    console.log(xmlHttp.responseText);
+    console.log(JSON.parse(xmlHttp.responseText))
     bl = JSON.parse(xmlHttp.responseText);
+    console.log(bl)
     if(bl.hasOwnProperty(location.href.split("#")[1])){
       console.log("[x] CONTAINS BLACKLISTED DOMAIN");
       document.getElementById("domain").innerHTML = "DOMAIN: " + location.pathname.split("#")[1];
