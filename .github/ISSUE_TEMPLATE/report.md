@@ -1,7 +1,7 @@
 ---
-name: Custom issue template
-about: Describe this issue template's purpose here.
-title: ''
+name: REPORT DOMAIN
+about: REPORT DOMAIN
+title: 'REPORT DOMAIN: example.org'
 labels: ''
 assignees: ''
 
